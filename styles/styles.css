@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --dark-grey: hsl(232, 19%, 15%);
+  --mid-grey: hsl(228, 12%, 44%);
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-1: hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.container > h1 {
+  font-size: 1.5rem;
+  width: 20rem;
+  margin-bottom: 0.5rem;
+  color: hsl(232, 19%, 15%);
+}
+
+.container.darkmode {
+  color: var(--mid-grey);
+  font-weight: 700;
+}
+
+.container > p {
+  color: var(--mid-grey);
+}
+
+/* switch */
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section.overview {
+  align-items: flex-start;
+}
+
+.card {
+  background: hsl(227, 47%, 96%);
+  margin: auto;
+  width: 20rem;
+  height: 13rem;
+  border-radius: 5px;
+  align-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card::before {
+  content: "";
+  height: 4px;
+  display: block;
+  background-color: var(--facebook);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: 0 30px;
+}
+
+.card-title {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  text-align: center;
+  justify-content: baseline;
+  font-weight: 400;
+}
+
+.card-title-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin: auto;
+  color: hsl(228, 12%, 44%);
+}
+
+.card-title img {
+  padding-right: 0.5rem;
+}
+
+.card-followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-followers-text {
+  margin-top: 0.5 auto 0;
+  color: hsl(228, 12%, 44%);
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.card-number {
+  font-weight: 700;
+  font-size: 3rem;
+  color: hsl(232, 19%, 15%);
+  text-align: center;
+}
+
+.card-followers-today {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.card-followers-today-icon {
+  margin-right: 3px;
+  display: flex;
+}
+
+.card-followers-today-text {
+  font-size: 0.7rem;
+  color: var(--lime-green);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 1rem;
+  width: 100%;
+}
+
+.card-social {
+  background: hsl(227, 47%, 96%);
+  margin: auto;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 5px;
+  align-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-social .card-title {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-social .card-title-text {
+  margin: 0;
+}
+
+.card-social .card-number {
+  font-size: 2rem;
+}
+
+.card-social .card-followers-today {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0.6rem;
+  margin-top: 1rem;
+}
+
+.card-social-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin: 0 auto;
+}
+#porqueria {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (min-width: 730px) {
+  .wrapper {
+    padding: 2vh 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header .wrapper {
+    display: inline-flex;
+    padding: 4vh 10vw 0 10vw;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .wrapper > * {
+    margin: 0 1rem 0 1rem;
+  }
+  .dashboard-text h1 {
+    font-size: 2rem;
+    width: 100%;
+    display: inline-flex;
+  }
+  .container .dashboard-text p {
+    font-weight: 700;
+  }
+  .dashboard-text #hr {
+    display: none;
+  }
+  .section-social-stats .wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 10 0 14rem;
+    margin: 1rem;
+  }
+
+  .card-social {
+    flex: 1 0 14rem;
+    margin: 10px 0 0 2%;
+    width: calc(100% * (1 / 4) - 10px - 1px);
+    margin: 1rem;
+  }
+  .overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overview-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wrapper.overview {
+    margin: auto;
+    margin: 1rem;
+  }
+}
